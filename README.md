@@ -22,6 +22,26 @@ Add this line to your `application.js` file.
 
     //= require snap
 
+Then, either add this to `application.js` below the requires...
+
+    $(function() {
+      var snapper = new Snap({
+        element: document.getElementById('content')
+      });
+    })
+
+... or add it directly to your layout file (i.e. `application.html.erb`)
+
+    <script type="text/javascript">
+      var snapper = new Snap({
+        element: document.getElementById('content')
+      });
+    </script>
+
+There's also an optional CSS stylesheet containing the barebones styles you'll need to get started (also from https://github.com/jakiestfu/Snap.js). To use it, add this to `application.css`:
+
+    *= require snap
+
 ## Contributing
 
 1. Fork it
