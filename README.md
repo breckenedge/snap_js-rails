@@ -42,6 +42,29 @@ There's also an optional CSS stylesheet containing the barebones styles you'll n
 
     *= require snap
 
+A barebones `application.html.erb` might look like this:
+
+    ...
+    <body>
+      <div class="snap-drawers" style="position: absolute">
+        <div class="snap-drawer snap-drawer-left">
+          <!-- Left Drawer Content -->
+        </div>
+        <div class="snap-drawer snap-drawer-right">
+          <!-- Right Drawer Content -->
+        </div>
+      </div>
+      <div id="content" class="snap-content">
+        <div id="toolbar">
+          <!-- Toolbar Content -->
+        </div>
+        <%= yield %>
+      </div>
+    </body>
+    ...
+
+Refer to [Snap.js](https://github.com/jakiestfu/Snap.js) for more options.
+
 ## Contributing
 
 1. Fork it
